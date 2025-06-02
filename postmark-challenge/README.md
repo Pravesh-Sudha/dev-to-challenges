@@ -30,8 +30,8 @@ This project is an **Email-based AI Assistant** powered by **Gemini (Google AI)*
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/yourusername/email-ai-assistant.git
-cd email-ai-assistant
+git clone https://github.com/Pravesh-Sudha/dev-to-challenges.git
+cd dev-to-challenges/postmark-challenge/
 ````
 
 ### 2. Install dependencies
