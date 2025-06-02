@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pravesh Sudha To-Do List - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        Pravesh Sudha To-Do List
+    </div>
+
+    <!-- Main content -->
+    <div class="container">
+        <h1>Your Tasks</h1>
+
+        <!-- Flash messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash-message {{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <!-- Add Task Form -->
+        <form action="{{ url_for('tasks.add_task') }}" method="POST" class="add-task-form">
+            <input type="text" name="task_name" placeholder="Enter a new task" required>
+            <button type="submit">Add Task</button>
+        </form>
+
+        <!-- Task List -->
+        <ul class="task-list">
+            {% for task in tasks %}
+                <li class="task-item {% if task['completed'] %}completed{% endif %}">
+                    <span>{{ task['task_name'] }}</span>
+                    
+                    <!-- Mark as complete -->
+                    {% if not task['completed'] %}
+                        <form action="{{ url_for('tasks.complete_task', task_id=task['task_id']) }}" method="POST" style="display:inline;">
+                            <button type="submit" class="complete-btn">Complete</button>
+                        </form>
+                    {% else %}
+                        <span>(Completed)</span>
+                    {% endif %}
+                    
+                    <!-- Delete task -->
+                    <form action="{{ url_for('tasks.delete_task', task_id=task['task_id']) }}" method="POST" style="display:inline;">
+                        <button type="submit">Delete</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
