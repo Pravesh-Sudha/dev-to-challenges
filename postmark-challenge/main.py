@@ -16,6 +16,10 @@ async def receive_email(payload: PostmarkInbound):
     subject = payload.Subject
     body = payload.TextBody
 
+    # Avoid infinite loop by skipping self-sent emails
+    if sender == "assistant@codewithpravesh.tech":
+        return {"message": "Self-email detected, skipping."}
+
     response = get_response(body)
 
     try:
