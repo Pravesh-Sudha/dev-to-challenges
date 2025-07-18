@@ -1,0 +1,267 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.bg {
+  animation: slide 8s ease-in-out infinite alternate;
+  background-image: linear-gradient(45deg, #ff6b6b 25%, #4ecdc4 50%, #45b7d1 75%, #96c93d 100%);
+  bottom: 0;
+  left: -50%;
+  opacity: 0.7;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+  filter: blur(5px);
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 10s;
+  background-image: linear-gradient(-45deg, #ff9a8b 25%, #a0e7e5 50%, #b4f8c8 75%, #f6d365 100%);
+}
+
+.bg3 {
+  animation-duration: 12s;
+  background-image: linear-gradient(135deg, #f093fb 25%, #f5576c 50%, #4facfe 75%, #00f2fe 100%);
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-20%) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateX(0%) scale(1.05);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateX(20%) scale(1);
+    opacity: 0.7;
+  }
+}
+
+.office {
+  width: 600px;
+  height: 400px;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+  border: 5px solid #353535;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.wall {
+  width: 100%;
+  height: 100%;
+  background-color: #e5f3e6;
+  position: absolute;
+  top: 0;
+}
+
+.desk {
+  width: 500px;
+  height: 25px;
+  background: linear-gradient(to right, #a0522d, #8b4513);
+  position: absolute;
+  bottom: 120px;
+  left: 50px;
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.desk::before,
+.desk::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 120px;
+  background-color: #8b4513;
+  bottom: -120px;
+}
+
+.desk::before {
+  left: 20px;
+}
+
+.desk::after {
+  right: 20px;
+}
+
+.computer {
+  width: 150px;
+  height: 100px;
+  position: absolute;
+  bottom: 25px;
+  left: 125px;
+  z-index: 2;
+}
+
+.quote {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  text-align: center;
+  font-family: 'DM-Sans', bold;
+  font-size: 18px;
+  color: #333;
+  background: #f9f9e3;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  padding: 10px 15px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+.external-monitor {
+  width: 130px;
+  height: 90px;
+  position: absolute;
+  bottom: 25px;
+  right: 50px;
+  z-index: 2;
+}
+
+.monitor-screen {
+  width: 100%;
+  height: 80px;
+  background: #222;
+  border: 4px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.laptop-stand {
+  position: absolute;
+  bottom: 25px;
+  right: 300px;
+  width: 20px;
+  height: 40px;
+  background: #aaa;
+  border-radius: 3px;
+  box-shadow: inset -2px -2px 3px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.laptop {
+  width: 12px;
+  height: 30px;
+  background: #444;
+  border: 2px solid #999;
+  border-radius: 2px;
+}
+
+.monitor-stand {
+  width: 25px;
+  height: 10px;
+  background: #ccc;
+  margin: 0 auto;
+  margin-top: 2px;
+  border-radius: 2px;
+}
+
+.screen {
+  width: 100%;
+  height: 85px;
+  background-color: #222;
+  border: 5px solid #e0e0e0;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.stand {
+  width: 40px;
+  height: 15px;
+  background-color: #c0c0c0;
+  position: absolute;
+  bottom: 0;
+  left: 55px;
+}
+
+.keyboard {
+  width: 180px;
+  height: 10px;
+  background-color: #666;
+  position: absolute;
+  bottom: 25px;
+  left: 110px;
+  border-radius: 3px;
+  z-index: 3;
+}
+
+.mouse {
+  width: 20px;
+  height: 15px;
+  background-color: #666;
+  position: absolute;
+  bottom: 25px;
+  left: 300px;
+  border-radius: 10px 10px 5px 5px;
+  z-index: 3;
+}
+
+.water-bottle {
+  width: 40px;
+  height: 80px;
+  position: absolute;
+  bottom: 25px;
+  left: 60px;
+  z-index: 3;
+}
+
+.cap {
+  width: 26px;
+  height: 12px;
+  background-color: #68d8d6;
+  position: absolute;
+  top: 0;
+  left: 7px;
+  border-radius: 5px 5px 0 0;
+}
+
+.bottle-body {
+  width: 40px;
+  height: 68px;
+  background-color: rgba(102, 212, 211, 0.5);
+  position: absolute;
+  bottom: 0;
+  border-radius: 0 0 10px 10px;
+}
+
+.water-bottle-text {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-20deg);
+  font-family: 'DM-Sans', cursive;
+  font-size: 8px;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  line-height: 1.2;
+}
+
+
+.heading {
+  position: absolute;
+  top: 75px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #333;
+  z-index: 10;
+  text-align: center;
+  width: 100%;
+}
