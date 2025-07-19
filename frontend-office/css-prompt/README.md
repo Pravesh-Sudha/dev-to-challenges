@@ -13,6 +13,10 @@ This project is my submission for the **Dev.TO Frontend Challenge**, where I rec
 
 ![Demo-Image](<Screenshot 2025-07-19 at 12.16.42 PM.png>)
 
+Here's a Sneak Peak of my Workstation👇:
+
+![actual-image](<WhatsApp Image 2025-07-18 at 22.27.57.jpeg>)
+
 ## Features
 
 - **Animated Background**: Three overlapping gradient layers (`.bg`, `.bg2`, `.bg3`) with smooth sliding and scaling animations for a vibrant effect.
