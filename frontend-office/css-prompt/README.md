@@ -9,6 +9,10 @@ This project is my submission for the **Dev.TO Frontend Challenge**, where I rec
 - **index.html**: The main HTML file that structures the CSS Art, including the desk setup and animated background.
 - **styles.css**: The CSS file containing styles for the desk elements and a dynamic, multi-layered gradient background with animations.
 
+## Demo Image
+
+![Demo-Image](<Screenshot 2025-07-19 at 12.16.42 PM.png>)
+
 ## Features
 
 - **Animated Background**: Three overlapping gradient layers (`.bg`, `.bg2`, `.bg3`) with smooth sliding and scaling animations for a vibrant effect.
