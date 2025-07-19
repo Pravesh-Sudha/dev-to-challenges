@@ -225,7 +225,7 @@ body {
 .cap {
   width: 26px;
   height: 12px;
-  background-color: #68d8d6;
+  background-color: #0347bd;
   position: absolute;
   top: 0;
   left: 7px;
@@ -235,7 +235,7 @@ body {
 .bottle-body {
   width: 40px;
   height: 68px;
-  background-color: rgba(102, 212, 211, 0.5);
+  background-color: #023794;
   position: absolute;
   bottom: 0;
   border-radius: 0 0 10px 10px;
@@ -245,13 +245,13 @@ body {
   position: absolute;
   top: 20px;
   left: 50%;
-  transform: translateX(-50%) rotate(-20deg);
-  font-family: 'DM-Sans', cursive;
+  transform: translateX(-50%);
+  font-family: 'DM-Sans', bold;
   font-size: 8px;
   color: #fff;
   text-align: center;
   width: 100%;
-  line-height: 1.2;
+  line-height: 1.5;
 }
 
 
