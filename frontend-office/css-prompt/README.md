@@ -11,7 +11,7 @@ This project is my submission for the **Dev.TO Frontend Challenge**, where I rec
 
 ## Demo Image
 
-![Demo-Image](<Screenshot 2025-07-19 at 12.16.42 PM.png>)
+![Demo-Image](<Screenshot 2025-07-21 at 3.36.07 PM-1.png>)
 
 Here's a Sneak Peak of my Workstation👇:
 
