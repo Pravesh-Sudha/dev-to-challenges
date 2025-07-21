@@ -17,6 +17,8 @@ Here's a Sneak Peak of my Workstation👇:
 
 ![actual-image](<WhatsApp Image 2025-07-18 at 22.27.57.jpeg>)
 
+> The image on the monitor was the first draft of CSS Art :)
+
 ## Features
 
 - **Animated Background**: Three overlapping gradient layers (`.bg`, `.bg2`, `.bg3`) with smooth sliding and scaling animations for a vibrant effect.
