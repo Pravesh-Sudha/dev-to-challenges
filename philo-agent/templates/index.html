@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Philosophy Voice Agent</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #111 20%, #222 100%);
+      color: #f8f8f8;
+      font-family: 'Inter', sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    blockquote {
+      font-style: italic;
+      color: #ccc;
+      margin-bottom: 40px;
+    }
+
+    button {
+      background-color: #444;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      margin: 10px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #666;
+    }
+
+    #response-area {
+      margin-top: 40px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      font-size: 1.1rem;
+      white-space: pre-wrap;
+    }
+
+    .label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    #loader {
+      margin-top: 20px;
+      font-style: italic;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <h1>Philosophy Voice Agent</h1>
+  <blockquote>"The unexamined life is not worth living." – Socrates</blockquote>
+
+  <div>
+    <button id="record-btn" onclick="toggleRecording()">🎙 Start Recording</button>
+    <button onclick="stopSpeaking()">🔇 Stop Voice</button>
+  </div>
+
+  <div id="loader" style="display:none;">
+    <p>Thinking deeply... 🧠</p>
+  </div>
+
+  <div id="response-area">
+    <div id="question"></div>
+    <div id="response"></div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+Flask
+assemblyai
+google-generativeai
+python-dotenv
