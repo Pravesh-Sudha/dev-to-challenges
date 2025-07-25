@@ -14,6 +14,11 @@ This is a Flask-based web app that lets users speak a philosophical question and
 
 ![alt text](<Screenshot 2025-07-25 at 1.32.57 PM.png>)
 
+## Application Worklow
+
+<img width="1535" height="752" alt="Screenshot 2025-07-25 at 2 55 37 PM" src="https://github.com/user-attachments/assets/3decdf6b-393e-4ee4-a3a5-e0b7d0af7172" />
+
+
 ## 🚀 Setup Instructions
 
 ### 1. Clone the repo
