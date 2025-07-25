@@ -14,6 +14,10 @@ This is a Flask-based web app that lets users speak a philosophical question and
 
 ![alt text](<Screenshot 2025-07-25 at 1.32.57 PM.png>)
 
+## Application Workflow
+
+![alt text](<Screenshot 2025-07-25 at 2.55.37 PM.png>)
+
 ## 🚀 Setup Instructions
 
 ### 1. Clone the repo
