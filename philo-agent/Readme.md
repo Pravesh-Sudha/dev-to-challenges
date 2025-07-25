@@ -9,6 +9,11 @@ This is a Flask-based web app that lets users speak a philosophical question and
 - Play back answers using browser TTS
 - Elegant UI with a philosophical quote
 
+## Demo-Images
+![alt text](<Screenshot 2025-07-25 at 1.33.14 PM.png>) 
+
+![alt text](<Screenshot 2025-07-25 at 1.32.57 PM.png>)
+
 ## 🚀 Setup Instructions
 
 ### 1. Clone the repo
