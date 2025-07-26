@@ -1,6 +1,7 @@
 postmark-challenge/.env
 postmark-challenge/app-env/
 postmark-challenge/__pycache__/
+**/.DS_prompt
 
 philo-agent/services/__pycache__
 philo-agent/app-env/
