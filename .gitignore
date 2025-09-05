@@ -6,3 +6,6 @@ postmark-challenge/__pycache__/
 philo-agent/services/__pycache__
 philo-agent/app-env/
 philo-agent/.env
+
+midnight-challenge/midnight-dapp-sample/node_modules
+midnight-challenge/new-venv/
