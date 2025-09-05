@@ -1,0 +1,18 @@
+services:
+  midnight-connector:
+    build: ./midnight-connector-mock
+    ports:
+      - "4000:4000"
+
+  midnight-indexer:
+    build: ./midnight-indexer-mock
+    ports:
+      - "5000:5000"
+
+  midnight-dapp-sample:
+    build: ./midnight-dapp-sample
+    ports:
+      - "3000:3000"
+    depends_on:
+      - midnight-connector
+      - midnight-indexer
