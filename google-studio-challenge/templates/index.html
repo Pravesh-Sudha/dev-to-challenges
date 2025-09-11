@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StoryWeave AI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-indigo-500 to-purple-700 min-h-screen flex items-center justify-center text-white">
+  <div class="bg-white/10 p-8 rounded-2xl shadow-lg w-full max-w-2xl relative">
+    <h1 class="text-44 font-extrabold mb-3 text-center">📖 StoryWeave AI</h1>
+    <p class="text-center text-lg text-white/80 mb-6">Mix and match <span class="font-semibold">text, images, and audio</span> to co-create stories with AI ✨</p>
+
+    <!-- Form -->
+    <form id="storyForm" enctype="multipart/form-data" class="space-y-5">
+      <!-- Text Prompt -->
+      <div>
+        <label class="block mb-1 font-semibold">Your story idea (optional) 📝</label>
+        <textarea name="prompt" id="prompt" class="w-full p-3 rounded-xl text-black" rows="3"
+          placeholder="Enter a story seed or leave blank if using image/audio only..."></textarea>
+      </div>
+
+      <!-- Style Selector -->
+      <div>
+        <label class="block mb-1 font-semibold">Choose story style ✨</label>
+        <select name="style" id="style" class="w-full p-2 rounded-xl text-black bg-white">
+          <option value="fantasy">Fantasy</option>
+          <option value="sci-fi">Sci-Fi</option>
+          <option value="mystery">Mystery</option>
+          <option value="adventure">Adventure</option>
+          <option value="horror">Horror</option>
+        </select>
+      </div>
+
+      <!-- Image Upload -->
+      <div>
+        <label class="block mb-1 font-semibold">Upload an image 🎨</label>
+        <input type="file" name="image" accept="image/*" class="w-full p-2 rounded-xl text-black bg-white">
+        <p class="text-sm text-white/70 mt-1">Optional — helps create a more vivid story.</p>
+      </div>
+
+      <!-- Audio Upload -->
+      <div>
+        <label class="block mb-1 font-semibold">Upload an audio file 🎤</label>
+        <input type="file" name="audio" accept="audio/*" class="w-full p-2 rounded-xl text-black bg-white">
+        <p class="text-sm text-white/70 mt-1">Optional — add voice, narration, or sound inspiration.</p>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit"
+        class="mt-3 w-full bg-yellow-500 hover:bg-yellow-600 text-black p-3 rounded-xl font-bold transition duration-200">
+        ✨ Generate Story
+      </button>
+    </form>
+
+    <!-- Loader -->
+    <div id="loader" class="hidden absolute inset-0 bg-black/70 flex flex-col items-center justify-center rounded-2xl">
+      <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-yellow-400"></div>
+      <p id="loaderText" class="mt-4 text-lg italic"></p>
+    </div>
+
+    <!-- Story Output -->
+    <div id="storyContainer" class="mt-6 hidden">
+      <h2 class="text-2xl font-bold mb-3">✨ Your Story</h2>
+      <div id="story" class="text-lg leading-relaxed bg-white/20 p-4 rounded-xl max-h-96 overflow-y-auto whitespace-pre-wrap"></div>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById("storyForm");
+    const loader = document.getElementById("loader");
+    const loaderText = document.getElementById("loaderText");
+    const storyContainer = document.getElementById("storyContainer");
+    const storyDiv = document.getElementById("story");
+
+    const quotes = [
+      "✨ Story on the way...",
+      "🪄 Weaving imagination into words...",
+      "📚 Summoning your characters...",
+      "🌌 Crafting adventures beyond reality...",
+      "🔥 Forging your narrative..."
+    ];
+
+    let quoteIndex = 0;
+    let quoteInterval;
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      // Show loader
+      loader.classList.remove("hidden");
+      storyContainer.classList.add("hidden");
+      loaderText.innerText = quotes[0];
+
+      // Rotate quotes every 2s
+      quoteInterval = setInterval(() => {
+        quoteIndex = (quoteIndex + 1) % quotes.length;
+        loaderText.innerText = quotes[quoteIndex];
+      }, 2000);
+
+      try {
+        const formData = new FormData(form);
+        const res = await fetch("/generate", {
+          method: "POST",
+          body: formData
+        });
+
+        const data = await res.json();
+
+        // Hide loader
+        clearInterval(quoteInterval);
+        loader.classList.add("hidden");
+
+        if (data.error) {
+          storyDiv.innerText = "⚠️ " + data.error;
+        } else {
+          storyDiv.innerText = data.story;
+        }
+
+        storyContainer.classList.remove("hidden");
+      } catch (err) {
+        clearInterval(quoteInterval);
+        loader.classList.add("hidden");
+        storyContainer.classList.remove("hidden");
+        storyDiv.innerText = "⚠️ Something went wrong. Please try again.";
+      }
+    });
+  </script>
+</body>
+</html>
