@@ -9,3 +9,8 @@ philo-agent/.env
 
 midnight-challenge/midnight-dapp-sample/node_modules
 midnight-challenge/new-venv/
+
+google-studio-challenge/__pycache__
+google-studio-challenge/.env
+google-studio-challenge/venv
+
