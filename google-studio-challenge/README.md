@@ -61,11 +61,11 @@ Open `http://127.0.0.1:5000` in your browser.
 
 ## 📷 Screenshots
 
-![alt text](<Screenshot 2025-09-12 at 4.49.57 PM.png>)
+![alt text](<img/Screenshot 2025-09-12 at 4.49.57 PM.png>)
 
-![alt text](<Screenshot 2025-09-12 at 4.49.09 PM.png>)
+![alt text](<img/Screenshot 2025-09-12 at 4.49.09 PM.png>)
 
-![alt text](<Screenshot 2025-09-11 at 10.33.40 PM.png>)
+![alt text](<img/Screenshot 2025-09-11 at 10.33.40 PM.png>)
 
 ---
 
