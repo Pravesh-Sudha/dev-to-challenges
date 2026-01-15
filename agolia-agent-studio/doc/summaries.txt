@@ -1,0 +1,24 @@
+1.
+Terraform Summary:
+This infrastructure provisions a serverless backend on AWS to support a public-facing application.
+
+User requests are handled through Amazon API Gateway, which routes traffic to AWS Lambda functions that run backend logic on demand.
+
+Some background processing and scheduled tasks also run on Lambda, allowing the system to scale automatically without managing servers.
+
+The application stores uploaded files and generated assets in Amazon S3.
+
+System logs, metrics, and alerts are collected using Amazon CloudWatch to ensure operational visibility.
+
+Access between services is controlled using AWS Identity and Access Management (IAM).
+
+
+2.
+Terraform Summary:
+This infrastructure provisions an always-on backend for a customer-facing application.
+
+The core application runs on Amazon EC2 instances that are grouped into an Auto Scaling Group to handle changes in traffic. An Elastic Load Balancer distributes incoming user requests across these instances.
+
+Persistent application data is stored in an Amazon RDS database. Static assets such as images and files are stored in Amazon S3 and delivered globally using Amazon CloudFront to improve performance.
+
+The system operates inside an Amazon VPC to control network exposure. Amazon CloudWatch is used to monitor system health and trigger alerts when performance issues occur. Access between services is managed using AWS Identity and Access Management (IAM).

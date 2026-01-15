@@ -1,0 +1,119 @@
+[
+  {
+    "id": "aws_eks_cluster",
+    "cloud": "aws",
+    "service_type": "compute",
+    "persona": "product_manager",
+    "resource": "aws_eks_cluster",
+    "service_name": "Amazon EKS",
+    "pm_explanation": "This is the core platform where the application runs. It allows the system to run containerized services and automatically scale as user traffic increases."
+  },
+  {
+    "id": "aws_lb",
+    "cloud": "aws",
+    "service_type": "networking",
+    "persona": "product_manager",
+    "resource": "aws_lb",
+    "service_name": "Elastic Load Balancer",
+    "pm_explanation": "This is the public entry point for users. It distributes incoming traffic across the application so no single component gets overloaded."
+  },
+  {
+    "id": "aws_db_instance",
+    "cloud": "aws",
+    "service_type": "database",
+    "persona": "product_manager",
+    "resource": "aws_db_instance",
+    "service_name": "Amazon RDS",
+    "pm_explanation": "This stores the application’s persistent data, such as user accounts or transactions. Data durability and backups are critical here."
+  },
+  {
+    "id": "aws_s3_bucket",
+    "cloud": "aws",
+    "service_type": "storage",
+    "persona": "product_manager",
+    "resource": "aws_s3_bucket",
+    "service_name": "Amazon S3",
+    "pm_explanation": "This is used to store files or assets, such as images, logs, or backups. It’s often part of how the system handles large or static data."
+  },
+  {
+    "id": "aws_cloudfront_distribution",
+    "cloud": "aws",
+    "service_type": "cdn",
+    "persona": "product_manager",
+    "resource": "aws_cloudfront_distribution",
+    "service_name": "Amazon CloudFront",
+    "pm_explanation": "This speeds up content delivery by caching data closer to users around the world, improving performance and reducing load on the core system."
+  },
+  {
+    "id": "aws_ecs",
+    "cloud": "aws",
+    "service_type": "compute",
+    "persona": "product_manager",
+    "resource": "aws_ecs_service",
+    "service_name": "Amazon ECS",
+    "pm_explanation": "ECS runs our application as containerized services that can scale automatically based on demand."
+  },
+  {
+    "id": "aws_ec2",
+    "cloud": "aws",
+    "service_type": "compute",
+    "persona": "product_manager",
+    "resource": "aws_instance",
+    "service_name": "Amazon EC2",
+    "pm_explanation": "EC2 provides dedicated servers where parts of the application run continuously."
+  },
+  {
+    "id": "aws_lambda",
+    "cloud": "aws",
+    "service_type": "serverless",
+    "persona": "product_manager",
+    "resource": "aws_lambda_function",
+    "service_name": "AWS Lambda",
+    "pm_explanation": "Lambda runs small pieces of backend logic only when needed, without managing servers."
+  },
+  {
+    "id": "aws_api_gateway",
+    "cloud": "aws",
+    "service_type": "api",
+    "persona": "product_manager",
+    "resource": "aws_api_gateway",
+    "service_name": "Amazon API Gateway",
+    "pm_explanation": "API Gateway is the front door that securely exposes backend functionality to users and clients."
+  },
+  {
+    "id": "aws_cloudwatch",
+    "cloud": "aws",
+    "service_type": "observability",
+    "persona": "product_manager",
+    "resource": "aws_cloudwatch",
+    "service_name": "Amazon CloudWatch",
+    "pm_explanation": "CloudWatch monitors system health and alerts us when something goes wrong."
+  },
+  {
+    "id": "aws_iam_role",
+    "cloud": "aws",
+    "service_type": "security",
+    "persona": "product_manager",
+    "resource": "aws_iam_role",
+    "service_name": "AWS Identity and Access Management (IAM)",
+    "pm_explanation": "This defines who or what is allowed to access different parts of the system, helping protect user data and prevent unauthorized actions."
+  },
+  {
+    "id": "aws_vpc",
+    "cloud": "aws",
+    "service_type": "networking",
+    "persona": "product_manager",
+    "resource": "aws_vpc",
+    "service_name": "Amazon VPC",
+    "pm_explanation": "This creates a private network boundary for the system, controlling which components are publicly accessible and which remain internal."
+  },
+  {
+    "id": "aws_billing",
+    "cloud": "aws",
+    "service_type": "cost_management",
+    "persona": "product_manager",
+    "resource": "aws_billing",
+    "service_name": "AWS Billing & Cost Management",
+    "pm_explanation": "This tracks infrastructure spending and helps understand how usage, traffic, and scaling decisions impact overall costs."
+  }
+]
