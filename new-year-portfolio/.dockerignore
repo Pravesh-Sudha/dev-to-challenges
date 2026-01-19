@@ -1,0 +1,7 @@
+.git
+.DS_Store
+deploy.sh
+README.md
+task.md
+implementation_plan.md
+walkthrough.md
