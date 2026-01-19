@@ -7,9 +7,9 @@ Welcome to my AI-focused portfolio website! This project showcases my journey br
 ## 🌟 Live Demo
 https://portfolio-website-93951960491.us-central1.run.app/
 
-![alt text](<Screenshot 2026-01-19 at 11.28.34 PM.png>)
-![alt text](<Screenshot 2026-01-19 at 11.28.56 PM.png>)
-![alt text](<Screenshot 2026-01-19 at 11.29.07 PM.png>)
+![alt text](<assets/Screenshot 2026-01-19 at 11.28.34 PM.png>)
+![alt text](<assets/Screenshot 2026-01-19 at 11.28.56 PM.png>)
+![alt text](<assets/Screenshot 2026-01-19 at 11.29.07 PM.png>)
 
 ## 📂 Repository Structure
 This project is part of my Dev.to Challenges repository:
